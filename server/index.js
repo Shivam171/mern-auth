@@ -8,6 +8,9 @@ dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 
+// Middleware to allow parse incoming requests from req.body
+app.use(express.json());
+
 // Routes
 app.use('/api/auth', authRoutes);
 
